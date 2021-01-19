@@ -348,7 +348,7 @@
                                 \ |z/     [0 -1  0]
                                  \|/      [0  0 -1]
                                   █————x  [1  0  0]
-                               forward    => (pi/2, -pi/2, 0) Euler angles
+                               forward    => (pi/2, -pi/2, 0) ZYX Euler angles
                                  cam_1    Final rotation = Average rotation * Initial rotation
   
                                 █████
@@ -356,14 +356,17 @@
    [1  0  0]       |         █    |    █                 [-1 0  0]
    [0  0 -1]  z————█ cam_4  █ y———.z    █  cam_2 █————z  [0  0 -1]
    [0  1  0]                 █         █         |       [0 -1  0]
-   => (pi/2, 0, 0)            ██     ██          |x      => (-pi/2, 0, pi)
+   => (0, 0, pi/2)            ██     ██          |x      => (pi, 0, -pi/2)
                                 █████
                                 lidar
 
                              x————█       [0  1  0]
                                   |       [0  0 -1]
                                   |z      [-1 0  0]
-                                 cam_3    => (pi/2, pi/2, 0)
+                                 cam_3    => (0, pi/2, pi/2)
+   # 欧拉角判断方法：
+   # 首先，将lidar坐标系与camera坐标系重合
+   # 然后，分别沿lidar坐标系的ZYX轴旋转alpha、beta、gamma角度得到lidar坐标系的实际位置
    ```
 
 ## 补充说明
