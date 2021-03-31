@@ -348,7 +348,7 @@
                                 \ |z/     [0 -1  0]
                                  \|/      [0  0 -1]
                                   █————x  [1  0  0]
-                               forward    => (pi/2, -pi/2, 0) ZYX Euler angles
+                               forward    => (0, -pi/2, pi/2) ZYX Euler angles
                                  cam_1    Final rotation = Average rotation * Initial rotation
   
                                 █████
